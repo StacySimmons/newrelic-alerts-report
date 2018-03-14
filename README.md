@@ -3,6 +3,7 @@ Python script for generating a list of New Relic alert policies and conditions.
 
 required packages: requests
 
+```
 usage: alertsReport.py [-h] [-o OUTPUTFILE] [-p] [-i] [-lp LIMITPOLICIES]
                        [-lc LIMITCONDITIONS] [-id] [-d {info,debug}]
                        apikey
@@ -27,3 +28,4 @@ optional arguments:
                         Do not include disabled conditions in the report
   -d {info,debug}, --debuglevel {info,debug}
                         Set the stdout debug level
+```
