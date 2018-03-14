@@ -49,7 +49,7 @@ headers_apm = {'X-Api-Key': api_key}
 headers_synthetics = {'X-Api-Key': api_key}
 headers_nrql = {'X-Api-Key': api_key}
 
-output = 'policyId,policyName,conditionId,conditionName,conditionType,conditionEnabled,entityId,entityServerName,entityAppName,channels (type|name|Slack Channel|Email),nrqlQuery'
+output = 'policyId,policyName,conditionId,conditionName,conditionType,conditionEnabled,entityId,entityServerName,entityAppName,channels (type|name|slackChannel|email),nrqlQuery'
 
 print('Script start')
 
