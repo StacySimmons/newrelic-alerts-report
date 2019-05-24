@@ -199,17 +199,6 @@ if response.status_code == requests.codes.ok:
                             entityServerName = ''
                             entityAppName = ''
                             if condition['type'] == 'servers_metric':
-                                '''Section removed due to Servers product and APIs being decommissioned in May 2018 
-								response = requests.get(url_servers + str(entity) + '.json', headers=headers_servers)
-
-								if response.status_code == requests.codes.ok:
-									if log_info: print('Success: Get Server api call for entity id ' + str(entity))
-									servers_json = response.json()
-									entityServerName = servers_json['server']['name']
-								else:
-									print('FAILED: Get Server api call for entity id ' + str(entity))
-									print(response.status_code)
-								'''
                                 entityServerName = 'NR_SERVERS'
                             if condition['type'] == 'apm_app_metric':
                                 response = requests.get(url_apm + str(entity) + '.json', headers=headers_apm)
