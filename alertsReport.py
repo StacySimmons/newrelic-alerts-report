@@ -173,6 +173,20 @@ if response.status_code == requests.codes.ok:
                                     else:
                                         if log_debug: print('Adding record: "' + lineToAdd + '"')
                                         output += '\n' + lineToAdd
+
+                        if len(infraHostEntities) == 0 and len(infraAppEntities) == 0:
+                            lineToAdd = str(policy['id']) + ',' + policy['name'] + ',' + str(infraCondition['id']) + \
+                                        ',' + infraCondition['name'] + ',' + infraCondition['type'] + ',' + \
+                                        str(infraCondition['enabled']) + ', , , ,' + channels
+                            if print_servers or infraCondition['type'] != 'servers_metric':
+                                if ignore_disabled:
+                                    if infraCondition['enabled']:
+                                        if log_debug: print('Adding record: "' + lineToAdd + '"')
+                                        output += '\n' + lineToAdd
+                                else:
+                                    if log_debug: print('Adding record: "' + lineToAdd + '"')
+                                    output += '\n' + lineToAdd
+
                     infraConditionsCounter += 1
 
             ##Starting non-infra conditions
